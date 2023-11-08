@@ -9,12 +9,34 @@
 </head>
 
 <body>
+  <div>
+    <span class="hour">1</span>
+    <span class="minutes">2</span>
+    <span class="seconds">3</span>
+  </div>
   <script>
-    const hour = new Date().getHours();
-    if (5 <= hour && hour < 12) document.body.style.backgroundColor = 'orange';
-    if (12 <= hour && hour < 15) document.body.style.backgroundColor = 'lightblue';
-    if (15 <= hour && hour < 19) document.body.style.backgroundColor = 'pink';
-    if (19 <= hour && hour < 5) document.body.style.backgroundColor = 'black';
+    const hour = document.getElementsByClassName('hour')[0];
+    const minutes = document.getElementsByClassName('minutes')[0];
+    const seconds = document.getElementsByClassName('seconds')[0];
+
+    function showTime() {
+      hour.innerText = new Date().getHours();
+      minutes.innerText = new Date().getMinutes();
+      seconds.innerText = new Date().getSeconds();
+    }
+
+
+    // setInterval("showTime()", 1000); 함수를 ""에 감싸서 호출해도 가능.
+    setInterval(() => showTime(), 1000);
+
+    const current = new Date().getHours();
+    console.log('current: ', current);
+    if (5 <= current && current < 12) document.body.style.backgroundColor = 'orange';
+    if (12 <= current && current < 15) document.body.style.backgroundColor = 'lightblue';
+    if (15 <= current && current < 19) document.body.style.backgroundColor = 'pink';
+    if (19 <= current && current < 5) document.body.style.backgroundColor = 'black';
+    if (19 <= current || current < 5) document.body.style.backgroundColor = 'black';
+
   </script>
 </body>
 
