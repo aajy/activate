@@ -34,8 +34,10 @@
     if (5 <= current && current < 12) document.body.style.backgroundColor = 'orange';
     if (12 <= current && current < 15) document.body.style.backgroundColor = 'lightblue';
     if (15 <= current && current < 19) document.body.style.backgroundColor = 'pink';
-    if (19 <= current && current < 5) document.body.style.backgroundColor = 'black';
-    if (19 <= current || current < 5) document.body.style.backgroundColor = 'black';
+    if (19 <= current || current < 5) {
+      document.body.style.backgroundColor = 'black'
+      document.body.style.color = 'white'
+    };
 
   </script>
 </body>
