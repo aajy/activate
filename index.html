@@ -10,17 +10,11 @@
 
 <body>
   <script>
-    function test(name) {
-      if (name) console.log(name + '님 반갑습니다.');
-    }
-    test();
-    test('김길동');
     function test2(name) {
-      name && console.log(name + '님 반갑습니다.');
+      let defaultName = '아무개';
+      !name && (name = defaultName);
+      console.log(name + '님 반값습니다.');
     }
-    test2();
-    test2('홍길동');
-
   </script>
 </body>
 
