@@ -9,35 +9,17 @@
 </head>
 
 <body>
-  <div>
-    <span class="hour">00</span> :
-    <span class="minutes">00</span> :
-    <span class="seconds">00</span>
-  </div>
   <script>
-    const hour = document.getElementsByClassName('hour')[0];
-    const minutes = document.getElementsByClassName('minutes')[0];
-    const seconds = document.getElementsByClassName('seconds')[0];
-
-    function showTime() {
-      hour.innerText = new Date().getHours();
-      minutes.innerText = new Date().getMinutes();
-      seconds.innerText = new Date().getSeconds();
+    function test(name) {
+      if (name) console.log(name + '님 반갑습니다.');
     }
-
-
-    // setInterval("showTime()", 1000); 함수를 ""에 감싸서 호출해도 가능.
-    setInterval(() => showTime(), 1000);
-
-    const current = new Date().getHours();
-    console.log('current: ', current);
-    if (5 <= current && current < 12) document.body.style.backgroundColor = 'orange';
-    if (12 <= current && current < 15) document.body.style.backgroundColor = 'lightblue';
-    if (15 <= current && current < 19) document.body.style.backgroundColor = 'pink';
-    if (19 <= current || current < 5) {
-      document.body.style.backgroundColor = 'black'
-      document.body.style.color = 'white'
-    };
+    test();
+    test('김길동');
+    function test2(name) {
+      name && console.log(name + '님 반갑습니다.');
+    }
+    test2();
+    test2('홍길동');
 
   </script>
 </body>
