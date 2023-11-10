@@ -6,29 +6,11 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Document</title>
   <link rel='stylesheet' href='style.css'>
+  <script src="main.js"></script>
 </head>
 
 <body>
-  <script>
 
-    const colors = ['red', 'green', 'blue', 'yellow', 'aqua']
-
-    colors.forEach((data, index) => {
-      console.log('첫번째 인수 활용', data);
-      console.log('두번째 인수 활용', colors[index]);
-      console.log('-------------');
-    })
-
-    const newColors = colors.forEach((data, index) => {
-      return data + index
-    });
-    console.log(newColors);
-    //괄호 뒤엔 세미콜론, 중괄호와 대괄호 뒤에는 세미콜론을 붙이지 않아도 된다.
-    const newColors2 = colors.map((data, index) => {
-      return data + index
-    });
-    console.log(newColors2)
-  </script>
 </body>
 
 </html>
