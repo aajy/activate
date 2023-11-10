@@ -22,8 +22,12 @@
     const newColors = colors.forEach((data, index) => {
       return data + index
     });
-    console.log(newColors)
-
+    console.log(newColors);
+    //괄호 뒤엔 세미콜론, 중괄호와 대괄호 뒤에는 세미콜론을 붙이지 않아도 된다.
+    const newColors2 = colors.map((data, index) => {
+      return data + index
+    });
+    console.log(newColors2)
   </script>
 </body>
 
