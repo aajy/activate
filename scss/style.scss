@@ -48,16 +48,16 @@
 	}
 	.colorBox {
 		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100px;
+		left: 50%;
+		top: 20vw;
+		transform: translateX(-50%);
 		ul {
 			width: 100%;
+			display: flex;
 			li {
-				width: 60px;
+				width: 30px;
 				height: 60px;
-				border-radius: 50px;
-				margin: 5px;
+				margin: 10px;
 				background-color: #444;
 				&:nth-of-type(1) {
 					background-color: red;
