@@ -30,11 +30,52 @@ html {
   --tablet: 1199px;
 }
 
+body {
+  width: 100%;
+  height: 500vh;
+  background-color: #444;
+}
+
 .wrap {
   width: 100vw;
   height: 100vh;
   background-color: black;
   overflow: hidden;
+}
+.wrap .scrollButton {
+  display: none;
+}
+.wrap .colorBox {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.wrap .colorBox ul {
+  width: 100%;
+  display: flex;
+}
+.wrap .colorBox ul li {
+  width: 30px;
+  height: 60px;
+  margin: 10px;
+  background-color: #444;
+  cursor: pointer;
+}
+.wrap .colorBox ul li:nth-of-type(1) {
+  background-color: red;
+}
+.wrap .colorBox ul li:nth-of-type(2) {
+  background-color: orange;
+}
+.wrap .colorBox ul li:nth-of-type(3) {
+  background-color: yellow;
+}
+.wrap .colorBox ul li:nth-of-type(4) {
+  background-color: yellowgreen;
+}
+.wrap .colorBox ul li:nth-of-type(5) {
+  background-color: skyblue;
 }
 .wrap > video {
   width: 100%;
@@ -76,36 +117,8 @@ html {
   background-color: #eee;
   color: var(--titColor);
 }
-.wrap .colorBox {
-  position: absolute;
-  left: 50%;
-  top: 20vw;
-  transform: translateX(-50%);
-}
-.wrap .colorBox ul {
-  width: 100%;
-  display: flex;
-}
-.wrap .colorBox ul li {
-  width: 30px;
-  height: 60px;
-  margin: 10px;
-  background-color: #444;
-}
-.wrap .colorBox ul li:nth-of-type(1) {
-  background-color: red;
-}
-.wrap .colorBox ul li:nth-of-type(2) {
-  background-color: orange;
-}
-.wrap .colorBox ul li:nth-of-type(3) {
-  background-color: yellow;
-}
-.wrap .colorBox ul li:nth-of-type(4) {
-  background-color: yellowgreen;
-}
-.wrap .colorBox ul li:nth-of-type(5) {
-  background-color: skyblue;
+.wrap .textBox .buttonBox button.scrollButton {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

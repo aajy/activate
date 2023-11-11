@@ -6,18 +6,16 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Document</title>
   <link rel='stylesheet' href='css/style.css'>
-  <script defer src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bezier-easing@2.1.0/dist/bezier-easing.min.js"></script>
+  <script src="js/anime.js"></script>
+  <script defer src="js/main.js"></script>
 </head>
 
 <body>
+  <section>
+    <article></article>
+  </section>
   <div class="wrap">
-    <video src="src/video/video.mp4" autoplay loop muted></video>
-    <div class="textBox">
-      <h1>Playlist</h1>
-      <div class="buttonBox">
-        <button class="button">pause</button>
-      </div>
-    </div>
     <div class="colorBox">
       <ul>
         <li></li>
@@ -27,7 +25,16 @@
         <li></li>
       </ul>
     </div>
+    <video src="src/video/throw.mp4" muted></video>
+    <div class="textBox">
+      <h1>Playlist</h1>
+      <div class="buttonBox">
+        <button class="scrollButton">scroll</button>
+        <button class="button">play</button>
+      </div>
+    </div>
   </div>
+  <h2>scrolling</h2>
 </body>
 
 </html>
