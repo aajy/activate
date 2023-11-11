@@ -1,10 +1,13 @@
 const video = document.querySelector('video');
-const playBtn = document.querySelector('.play');
-const pauseBtn = document.querySelector('.pause');
+const btn = document.querySelector('.button');
 
-playBtn.addEventListener('click', () => {
-	video.play();
-});
-pauseBtn.addEventListener('click', () => {
-	video.pause();
+btn.addEventListener('click', () => {
+	let btnText = btn.innerHTML;
+	if (btnText === 'pause') {
+		video.pause();
+		btn.innerHTML = 'play';
+	} else {
+		video.play();
+		btn.innerHTML = 'pause';
+	}
 });
