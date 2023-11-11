@@ -1,5 +1,5 @@
 @import 'reset';
-
+@import 'variable';
 .wrap {
 	width: 100vw;
 	height: 100vh;
@@ -11,14 +11,39 @@
 		height: 100%;
 		object-fit: cover;
 	}
-	h1 {
+	.textBox {
 		position: absolute;
 		left: 50%;
 		top: 50%;
-		transform: translateX(-50%, -50%);
+		transform: translate(-50%, -50%);
 		width: 100%;
+		color: var(--bodyColor);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	h1 {
 		text-align: center;
 		font-size: 10vw;
-		color: aliceblue;
+		color: var(--titColor);
+		margin-bottom: 30px;
+	}
+	.buttonBox {
+		display: flex;
+		button {
+			width: 100px;
+			height: 30px;
+			border: none;
+			background-color: aliceblue;
+			transition: 0.5s;
+			&:nth-child(1) {
+				margin-right: 10px;
+			}
+			&:hover {
+				background-color: #eee;
+				color: var(--titColor);
+			}
+		}
 	}
 }

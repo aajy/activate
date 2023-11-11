@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +22,14 @@ html {
   font-size: 16px;
 }
 
+:root {
+  --titColor: #ff2f2f;
+  --bodyColor: #85fcf4;
+  --titFont: "Nanum Myeongjo", "serif", "명조";
+  --bodyFont: "Noto Sans KR", "arial", "돋움";
+  --tablet: 1199px;
+}
+
 .wrap {
   width: 100vw;
   height: 100vh;
@@ -32,15 +41,40 @@ html {
   height: 100%;
   object-fit: cover;
 }
-.wrap h1 {
+.wrap .textBox {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translateX(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 100%;
+  color: var(--bodyColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrap h1 {
   text-align: center;
   font-size: 10vw;
-  color: aliceblue;
+  color: var(--titColor);
+  margin-bottom: 30px;
+}
+.wrap .buttonBox {
+  display: flex;
+}
+.wrap .buttonBox button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: aliceblue;
+  transition: 0.5s;
+}
+.wrap .buttonBox button:nth-child(1) {
+  margin-right: 10px;
+}
+.wrap .buttonBox button:hover {
+  background-color: #eee;
+  color: var(--titColor);
 }
 
 /*# sourceMappingURL=style.css.map */
