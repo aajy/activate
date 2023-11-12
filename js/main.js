@@ -3,6 +3,7 @@ const h1 = document.querySelector('h1');
 const btn = document.querySelector('.button');
 const colorBoxbutton = document.querySelectorAll('li');
 const scrollBtn = document.querySelector('.scrollButton');
+const timer = document.querySelector('.timer');
 
 /*
   new Anime(선택자, {변경할 속성객체}, {duration:시간, easeType: 가속도타입, callback: 완료함수})
@@ -21,6 +22,23 @@ scrollBtn.addEventListener('click', () => {
 			},
 		}
 	);
+});
+
+video.addEventListener('loadedmetadata', function () {
+	console.log(video.duration);
+	let newSeconds = video.duration;
+	if (newSeconds < 61) {
+		timer.innerText = '00:' + addZero(newSeconds);
+	}
+
+	var hours = Math.floor(newSeconds / 3600);
+	var mins = Math.floor((newSeconds - hours * 3600) / 60);
+	var secs = newSeconds - hours * 3600 - mins * 60;
+	timer.innerText = addZero(hours) + ':' + addZero(mins) + ':' + addZero(secs);
+
+	function addZero(num) {
+		return (num < 10 ? '0' : '') + num;
+	}
 });
 video.addEventListener('timeupdate', function () {
 	if (video.currentTime >= 4.3 && video.currentTime <= 4.5) {
