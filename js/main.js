@@ -4,7 +4,6 @@ const btn = document.querySelector('.button');
 const colorBoxbutton = document.querySelectorAll('li');
 const scrollBtn = document.querySelector('.scrollButton');
 const timer = document.querySelector('.timer');
-
 /*
   new Anime(선택자, {변경할 속성객체}, {duration:시간, easeType: 가속도타입, callback: 완료함수})
   left, top, width, height, opacity, scroll
@@ -24,6 +23,8 @@ scrollBtn.addEventListener('click', () => {
 	);
 });
 let newSeconds = 0;
+timer.style.color = '#fff';
+timer.style.fontSize = '100px';
 video.addEventListener('loadedmetadata', function () {
 	console.log(video.duration);
 	newSeconds = Math.floor(video.duration);
