@@ -23,8 +23,8 @@ scrollBtn.addEventListener('click', () => {
 	);
 });
 let newSeconds = 0;
-timer.style.color = '#fff';
-timer.style.fontSize = '100px';
+// timer.style.color = '#fff';
+// timer.style.fontSize = '100px';
 video.addEventListener('loadedmetadata', function () {
 	console.log(video.duration);
 	newSeconds = Math.floor(video.duration);

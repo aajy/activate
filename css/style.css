@@ -120,5 +120,10 @@ body {
 .wrap .textBox .buttonBox button.scrollButton {
   display: none;
 }
+.wrap .textBox .timer {
+  display: block;
+  font-size: 3rem;
+  color: red;
+}
 
 /*# sourceMappingURL=style.css.map */
