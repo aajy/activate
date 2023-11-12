@@ -23,12 +23,14 @@ scrollBtn.addEventListener('click', () => {
 		}
 	);
 });
-
+let newSeconds = 0;
 video.addEventListener('loadedmetadata', function () {
 	console.log(video.duration);
-	let newSeconds = video.duration;
+	newSeconds = Math.floor(video.duration);
+	textTimer(newSeconds);
+
 	if (newSeconds < 61) {
-		timer.innerText = '00:' + addZero(newSeconds);
+		return (timer.innerText = '00:' + addZero(newSeconds));
 	}
 
 	var hours = Math.floor(newSeconds / 3600);
@@ -38,6 +40,13 @@ video.addEventListener('loadedmetadata', function () {
 
 	function addZero(num) {
 		return (num < 10 ? '0' : '') + num;
+	}
+	function textTimer(seconds) {
+		var interval = setInterval(() => {
+			seconds -= 1;
+			timer.innerText = '00:' + addZero(seconds);
+			if (seconds === 0) return clearInterval(interval);
+		}, 1000);
 	}
 });
 video.addEventListener('timeupdate', function () {
