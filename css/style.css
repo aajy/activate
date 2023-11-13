@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -22,108 +21,47 @@ html {
   font-size: 16px;
 }
 
-:root {
-  --titColor: #ff2f2f;
-  --bodyColor: #85fcf4;
-  --titFont: "Nanum Myeongjo", "serif", "명조";
-  --bodyFont: "Noto Sans KR", "arial", "돋움";
-  --tablet: 1199px;
+main {
+  width: 600px;
+  height: 350px;
+  border: 1px solid #555;
+  margin: 100px auto;
+  position: relative;
 }
-
-body {
+main ul {
   width: 100%;
-  height: 500vh;
-  background-color: #444;
-}
-
-.wrap {
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  overflow: hidden;
-}
-.wrap .scrollButton {
-  display: none;
-}
-.wrap .colorBox {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-.wrap .colorBox ul {
-  width: 100%;
+  height: 50px;
   display: flex;
 }
-.wrap .colorBox ul li {
-  width: 30px;
-  height: 60px;
-  margin: 10px;
-  background-color: #444;
-  cursor: pointer;
-}
-.wrap .colorBox ul li:nth-of-type(1) {
-  background-color: red;
-}
-.wrap .colorBox ul li:nth-of-type(2) {
-  background-color: orange;
-}
-.wrap .colorBox ul li:nth-of-type(3) {
-  background-color: yellow;
-}
-.wrap .colorBox ul li:nth-of-type(4) {
-  background-color: yellowgreen;
-}
-.wrap .colorBox ul li:nth-of-type(5) {
-  background-color: skyblue;
-}
-.wrap > video {
-  width: 100%;
+main ul li {
+  flex: 1;
   height: 100%;
-  object-fit: cover;
-}
-.wrap .textBox {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  color: var(--bodyColor);
+  background-color: #555;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  font: bold 0.8rem/1 "arial";
+  color: #bbb;
+  cursor: pointer;
 }
-.wrap .textBox h1 {
-  text-align: center;
-  font-size: 10vw;
-  color: var(--titColor);
-  margin-bottom: 30px;
+main ul li.on {
+  background-color: #fff;
+  color: #555;
 }
-.wrap .textBox .buttonBox {
-  display: flex;
-}
-.wrap .textBox .buttonBox button {
-  width: 100px;
-  height: 30px;
-  border: none;
-  background-color: aliceblue;
-  transition: 0.5s;
-}
-.wrap .textBox .buttonBox button:nth-child(1) {
-  margin-right: 10px;
-}
-.wrap .textBox .buttonBox button:hover {
-  background-color: #eee;
-  color: var(--titColor);
-}
-.wrap .textBox .buttonBox button.scrollButton {
+main section article {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 50px;
+  left: 0;
   display: none;
+  justify-content: center;
+  align-items: center;
+  font: bold 3rem/1 "arial";
+  color: #555;
 }
-.wrap .textBox .timer {
-  display: block;
-  font-size: 3rem;
-  color: red;
+main section article.on {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */
