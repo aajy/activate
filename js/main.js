@@ -3,9 +3,8 @@ const btns = main.querySelectorAll('li');
 const boxs = main.querySelectorAll('article');
 
 btns.forEach((btn, idx) => {
-	btn.addEventListener('click', () => {
-		// activation(btns, idx);
-		// activation(boxs, idx);
+	btn.addEventListener('click', (e) => {
+		e.preventDefault();
 		if (btns[idx].classList.contains('on')) return;
 		[btns, boxs].forEach((el) => activation(el, idx));
 	});
